@@ -42,6 +42,7 @@ for condition in conditions:
     biomass, size_label, glucose_range, xylose_range = condition 
     size_code = particle_size_codes[size_label]
     
+    # now we generate random values for time, glucose yield and xylose yield in the given range respectively
     for _ in range(samples_per_condition):
         time = np.random.uniform(*time_range)
         glucose = np.random.uniform(*glucose_range)
